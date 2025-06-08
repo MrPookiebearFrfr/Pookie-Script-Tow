@@ -1,2 +1,71 @@
-# Pookie-Script-Tow
-a Fivem Towing/mechanic 
+Tow & Mechanic System
+A lightweight tow and mechanic system designed for FiveM. Works perfectly with the Pookie Playerlist to show on-duty DOT/Mechanic players in real-time.
+
+🔧 Features
+Easy-to-use mechanic & tow commands
+
+Shows 🔧 icon beside players on duty in the player list
+
+Clean integration with Pookie Playerlist
+
+Auto-clears requests after a few minutes
+
+Fully synced across all players
+
+Can be expanded with your own mechanic menu
+
+🛠️ Commands
+bash
+Copy
+Edit
+/dutydot — Toggle DOT/Mechanic duty (on/off)
+/ondutylist — View who’s on duty
+/fixcar — Instantly fix vehicle
+/fixtires — Repair vehicle tires
+/clean — Wash the vehicle
+/refuel — Fill up gas tank
+/unlock — Unlock nearby vehicles
+/fasttow — Instantly tow the vehicle
+/openmc — Open the mechanic menu UI
+⚠️ Some commands require the player to be on duty using /dutydot.
+🚧 /tow and /mechanic request features are currently being worked on.
+
+📦 How to Install
+Drop the blsrp_mechanic folder into your resources folder.
+
+Add this to your server.cfg:
+
+ruby
+Copy
+Edit
+ensure blsrp_mechanic
+In your pookie-playerlist/client.lua, add the mechanic icon handler (if not already included):
+
+lua
+Copy
+Edit
+RegisterNetEvent("blsrp_mechanic:updateTowList")
+AddEventHandler("blsrp_mechanic:updateTowList", function(towRequests)
+    for _, player in ipairs(GetActivePlayers()) do
+        local serverId = GetPlayerServerId(player)
+        local nameTag = GetPlayerName(player)
+        if towRequests[serverId] then
+            nameTag = nameTag .. " 🔧"
+        end
+        -- Add logic to update player display here
+    end
+end)
+▶️ How to Use
+DOT/Mechanic players use /dutydot to go on duty
+
+The playerlist will automatically show 🔧 next to on-duty players
+
+Use /ondutylist to check who's currently available
+
+🔗 Download
+GitHub: [Link to your GitHub or download location]
+(Replace this with your hosting link)
+
+❓ Need Help?
+Join the Discord: [your Discord invite link]
+or message [YourName]
