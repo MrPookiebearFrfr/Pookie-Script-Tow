@@ -1,4 +1,4 @@
-Tow & Mechanic System
+ Tow & Mechanic System
 A lightweight tow and mechanic system designed for FiveM. Works perfectly with the Pookie Playerlist to show on-duty DOT/Mechanic players in real-time.
 
 🔧 Features
@@ -15,9 +15,6 @@ Fully synced across all players
 Can be expanded with your own mechanic menu
 
 🛠️ Commands
-bash
-Copy
-Edit
 /dutydot — Toggle DOT/Mechanic duty (on/off)
 /ondutylist — View who’s on duty
 /fixcar — Instantly fix vehicle
@@ -31,32 +28,13 @@ Edit
 🚧 /tow and /mechanic request features are currently being worked on.
 
 📦 How to Install
-Drop the blsrp_mechanic folder into your resources folder.
+Drop the PookieScript_Tow folder into your resources folder.
 
 Add this to your server.cfg:
 
-ruby
-Copy
-Edit
-ensure blsrp_mechanic
-In your pookie-playerlist/client.lua, add the mechanic icon handler (if not already included):
-
-lua
-Copy
-Edit
-RegisterNetEvent("blsrp_mechanic:updateTowList")
-AddEventHandler("blsrp_mechanic:updateTowList", function(towRequests)
-    for _, player in ipairs(GetActivePlayers()) do
-        local serverId = GetPlayerServerId(player)
-        local nameTag = GetPlayerName(player)
-        if towRequests[serverId] then
-            nameTag = nameTag .. " 🔧"
-        end
-        -- Add logic to update player display here
-    end
-end)
+ensure PookieScript_Tow
 ▶️ How to Use
-DOT/Mechanic players use /dutydot to go on duty
+DOT Mechanic players use /dutydot to go on duty
 
 The playerlist will automatically show 🔧 next to on-duty players
 
@@ -67,5 +45,5 @@ GitHub: [Link to your GitHub or download location]
 (Replace this with your hosting link)
 
 ❓ Need Help?
-Join the Discord: [your Discord invite link]
-or message [YourName]
+Join the Discord: https://discord.gg/dCXRG2PDnP
+or message 
