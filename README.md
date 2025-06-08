@@ -50,7 +50,7 @@ The playerlist will automatically show 🔧 next to on-duty players
 Use /ondutylist to check who's currently available
 
 🔗 Download
-GitHub: [Link to your GitHub or download location]
+GitHub: https://github.com/MrPookiebearFrfr/Pookie-Script-Tow
 (Replace this with your hosting link)
 
 ❓ Need Help?
