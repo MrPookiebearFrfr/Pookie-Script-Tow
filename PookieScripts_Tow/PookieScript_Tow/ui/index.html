@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOT Workers On Duty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="playerList">
+        <div class="title">DOT WORKERS ON DUTY</div>
+        <button id="closeButton">Close</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>ID</th>
+                    <th>DISCORD</th>
+                </tr>
+            </thead>
+            <tbody id="playerListBody"></tbody>
+        </table>
+        <p id="playerCount">Players: 0 / 64</p>
+    </div>
+    <div id="mechanicMenu" style="display:none;">
+        <div class="title">MECHANIC MENU</div>
+        <button class="mc-btn" data-action="fixcar">Fix Car</button>
+        <button class="mc-btn" data-action="fixtires">Fix Tires</button>
+        <button class="mc-btn" data-action="clean">Clean Car</button>
+        <button class="mc-btn" data-action="refuel">Refuel Car</button>
+        <button class="mc-btn" data-action="unlock">Unlock Car</button>
+        <button class="mc-btn" data-action="fasttow">Fast Tow</button>
+        <button id="closeMechanicMenu">Close</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

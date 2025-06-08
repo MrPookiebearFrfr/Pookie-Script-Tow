@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: transparent; /* Transparent background */
+    color: #fff; /* White text for contrast */
+}
+
+#playerList {
+    position: fixed; /* Fixed position to center on the screen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the UI */
+    background-color: rgba(30, 30, 30, 0.95); /* Dark gray background with transparency */
+    border: 2px solid rgba(50, 50, 50, 0.8); /* Slightly lighter gray border */
+    padding: 20px;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    min-width: 300px; /* Adjusted minimum width */
+    max-width: 500px; /* Adjusted maximum width */
+    width: 80%; /* Adjusted width to be responsive */
+    z-index: 1000;
+    display: none; /* Initially hidden */
+}
+
+.title {
+    text-align: center;
+    font-size: 24px; /* Adjusted font size */
+    font-weight: bold;
+    color: #fff; /* White text for the header */
+    margin-bottom: 10px;
+}
+
+#closeButton {
+    display: block;
+    margin: 0 auto 10px auto;
+    padding: 8px 16px;
+    background-color: #444; /* Dark gray background */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#closeButton:hover {
+    background-color: #555; /* Slightly lighter gray on hover */
+}
+
+table {
+    width: 100%; /* Ensure the table fits within the container */
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #555; /* Gray table borders */
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #333; /* Darker gray for table headers */
+    color: #fff; /* White text for contrast */
+}
+
+td {
+    background-color: #222; /* Slightly lighter gray for table cells */
+    color: #fff; /* White text */
+}
+
+#playerCount {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff; /* White for player count text */
+}
+
+#toggleInstruction {
+    text-align: center;
+    font-size: 14px;
+    color: #fff; /* White for toggle instruction text */
+    margin-bottom: 10px;
+}
+
+#mechanicMenu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    border: 2px solid #3a6ea5;
+    padding: 32px 28px 24px 28px;
+    border-radius: 14px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.7), 0 1.5px 0 #3a6ea5 inset;
+    min-width: 340px;
+    max-width: 420px;
+    width: 95%;
+    z-index: 2000;
+    display: none;
+    animation: fadeInMenu 0.25s;
+}
+
+@keyframes fadeInMenu {
+    from { opacity: 0; transform: translate(-50%, -60%) scale(0.98);}
+    to   { opacity: 1; transform: translate(-50%, -50%) scale(1);}
+}
+
+#mechanicMenu .title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #5fa8d3;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    text-shadow: 0 2px 8px #000, 0 0 2px #5fa8d3;
+}
+
+.mc-btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 13px 0;
+    background: linear-gradient(90deg, #3a6ea5 0%, #274472 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(58,110,165,0.15);
+    transition: background 0.18s, transform 0.12s;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+.mc-btn:hover, .mc-btn:focus {
+    background: linear-gradient(90deg, #274472 0%, #5fa8d3 100%);
+    color: #232526;
+    transform: scale(1.03);
+}
+
+#closeMechanicMenu {
+    background: linear-gradient(90deg, #444 0%, #555 100%);
+    color: #fff;
+    margin-top: 18px;
+    font-size: 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+}
+
+#closeMechanicMenu:hover, #closeMechanicMenu:focus {
+    background: linear-gradient(90deg, #555 0%, #3a6ea5 100%);
+    color: #5fa8d3;
+    transform: scale(1.04);
+}
