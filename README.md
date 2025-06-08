@@ -16,14 +16,23 @@ Can be expanded with your own mechanic menu
 
 🛠️ Commands
 /dutydot — Toggle DOT/Mechanic duty (on/off)
+
 /ondutylist — View who’s on duty
+
 /fixcar — Instantly fix vehicle
+
 /fixtires — Repair vehicle tires
+
 /clean — Wash the vehicle
+
 /refuel — Fill up gas tank
+
 /unlock — Unlock nearby vehicles
+
 /fasttow — Instantly tow the vehicle
+
 /openmc — Open the mechanic menu UI
+
 ⚠️ Some commands require the player to be on duty using /dutydot.
 🚧 /tow and /mechanic request features are currently being worked on.
 
